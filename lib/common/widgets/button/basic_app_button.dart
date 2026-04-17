@@ -20,12 +20,19 @@ class BasicAppButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        minimumSize: Size.fromHeight(height ?? 80 )
+        minimumSize: Size.fromHeight(height ?? 70 ),
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 16),
       ),
       child: Text(
         title,
         style: TextStyle(
           color: textColor ?? Colors.white,
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
         ),
       )
     );
